@@ -25,7 +25,7 @@ public class TicTacToe
         this.clearBoard();
     }
     
-    private static void clearBoard()
+    public static void clearBoard()
     {
        // sets all the board elements to a space
        for(int row=0; row < ROW; row++)
@@ -195,5 +195,9 @@ public class TicTacToe
 
         // Checked every vector so I know I have a tie
         return true;
+    }
+
+    public void play(String player, int row, int col){
+        board[row][col] = player;
     }
 }
